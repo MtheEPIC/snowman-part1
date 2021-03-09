@@ -5,6 +5,8 @@
 using namespace ariel;
 using namespace std;
 
+//#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+
 TEST_CASE("Good snowman example")
 {
     /*
@@ -68,26 +70,18 @@ TEST_CASE("Bad snowman right eye")
 
 TEST_CASE("Bad snowman left arm")
 {
-    if (snowman(11111411)[16] != ' ' || snowman(11111411)[24] != '<')
-        CHECK_THROWS(snowman(11111411));
-    if (snowman(11112411)[16] != '\\' || snowman(11112411)[24] != ' ')
-        CHECK_THROWS(snowman(11112411));
-    if (snowman(11113411)[16] != ' ' || snowman(11113411)[24] != '/')
-        CHECK_THROWS(snowman(11113411));
-    if (snowman(11114411)[16] != ' ' || snowman(11114411)[24] != ' ')
-        CHECK_THROWS(snowman(11114411));
+    CHECK((snowman(11111411)[16] != ' ' || snowman(11111411)[24] != '<'));
+    CHECK((snowman(11112411)[16] != '\\' || snowman(11112411)[24] != ' '));
+    CHECK((snowman(11113411)[16] != ' ' || snowman(11113411)[24] != '/'));
+    CHECK((snowman(11114411)[16] != ' ' || snowman(11114411)[24] != ' '));
 }
 
 TEST_CASE("Bad snowman right arm")
 {
-    if (snowman(11114111)[22] != ' ' || snowman(11114111)[30] != '>')
-        CHECK_THROWS(snowman(11114111));
-    if (snowman(11114211)[22] != '/' || snowman(11114211)[30] != ' ')
-        CHECK_THROWS(snowman(11114211));
-    if (snowman(11114311)[22] != ' ' || snowman(11114311)[30] != '\\')
-        CHECK_THROWS(snowman(11114311));
-    if (snowman(11114411)[22] != ' ' || snowman(11114411)[30] != ' ')
-        CHECK_THROWS(snowman(11114411));
+    CHECK((snowman(11114111)[22] != ' ' || snowman(11114111)[30] != '>'));
+    CHECK((snowman(11114211)[22] != '/' || snowman(11114211)[30] != ' '));
+    CHECK((snowman(11114311)[22] != ' ' || snowman(11114311)[30] != '\\'));
+    CHECK((snowman(11114411)[22] != ' ' || snowman(11114411)[30] != ' '));
 }
 
 TEST_CASE("Bad snowman torso")
