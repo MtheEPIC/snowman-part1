@@ -225,16 +225,94 @@ TEST_CASE("Good snowman right arm")
 
 TEST_CASE("Good snowman torso")
 {
-    CHECK(snowman(11114411).substr(22, 3) == string(" : "));
-    CHECK(snowman(11114421).substr(22, 3) == string("] ["));
-    CHECK(snowman(11114431).substr(22, 3) == string("> <"));
-    CHECK(snowman(11114441).substr(22, 3) == string("   "));
+    // small hat
+    // no hands
+    CHECK(snowman(11114411).substr(13, 3) == string(" : "));
+    CHECK(snowman(11114421).substr(13, 3) == string("] ["));
+    CHECK(snowman(11114431).substr(13, 3) == string("> <"));
+    CHECK(snowman(11114441).substr(13, 3) == string("   "));
+    // left hand
+    CHECK(snowman(11113411).substr(16, 3) == string(" : "));
+    CHECK(snowman(11113421).substr(16, 3) == string("] ["));
+    CHECK(snowman(11113431).substr(16, 3) == string("> <"));
+    CHECK(snowman(11113441).substr(16, 3) == string("   "));
+    // right hand
+    CHECK(snowman(11114311).substr(15, 3) == string(" : "));
+    CHECK(snowman(11114321).substr(15, 3) == string("] ["));
+    CHECK(snowman(11114331).substr(15, 3) == string("> <"));
+    CHECK(snowman(11114341).substr(15, 3) == string("   "));
+    // both hand
+    CHECK(snowman(11113311).substr(18, 3) == string(" : "));
+    CHECK(snowman(11113321).substr(18, 3) == string("] ["));
+    CHECK(snowman(11113331).substr(18, 3) == string("> <"));
+    CHECK(snowman(11113341).substr(18, 3) == string("   "));
+
+    // big hat
+    // no hands
+    CHECK(snowman(21114411).substr(19, 3) == string(" : "));
+    CHECK(snowman(21114421).substr(19, 3) == string("] ["));
+    CHECK(snowman(21114431).substr(19, 3) == string("> <"));
+    CHECK(snowman(21114441).substr(19, 3) == string("   "));
+    // left hand
+    CHECK(snowman(21113411).substr(23, 3) == string(" : "));
+    CHECK(snowman(21113421).substr(23, 3) == string("] ["));
+    CHECK(snowman(21113431).substr(23, 3) == string("> <"));
+    CHECK(snowman(21113441).substr(23, 3) == string("   "));
+    // right hands
+    CHECK(snowman(21114311).substr(22, 3) == string(" : "));
+    CHECK(snowman(21114321).substr(22, 3) == string("] ["));
+    CHECK(snowman(21114331).substr(22, 3) == string("> <"));
+    CHECK(snowman(21114341).substr(22, 3) == string("   "));
+    // both hands
+    CHECK(snowman(21113311).substr(26, 3) == string(" : "));
+    CHECK(snowman(21113321).substr(26, 3) == string("] ["));
+    CHECK(snowman(21113331).substr(26, 3) == string("> <"));
+    CHECK(snowman(21113341).substr(26, 3) == string("   "));
 }
 
 TEST_CASE("Good snowman base")
 {
+    // small hat
+    // no hands
     CHECK(snowman(11114411).substr(19, 3) == string(" : "));
     CHECK(snowman(11114412).substr(19, 3) == string("\" \""));
     CHECK(snowman(11114413).substr(19, 3) == string("___"));
     CHECK(snowman(11114414).substr(19, 3) == string("   "));
+    // left hands
+    CHECK(snowman(11113411).substr(23, 3) == string(" : "));
+    CHECK(snowman(11113412).substr(23, 3) == string("\" \""));
+    CHECK(snowman(11113413).substr(23, 3) == string("___"));
+    CHECK(snowman(11113414).substr(23, 3) == string("   "));
+    // right hands
+    CHECK(snowman(11114311).substr(22, 3) == string(" : "));
+    CHECK(snowman(11114312).substr(22, 3) == string("\" \""));
+    CHECK(snowman(11114313).substr(22, 3) == string("___"));
+    CHECK(snowman(11114314).substr(22, 3) == string("   "));
+    // both hands
+    CHECK(snowman(11113311).substr(26, 3) == string(" : "));
+    CHECK(snowman(11113312).substr(26, 3) == string("\" \""));
+    CHECK(snowman(11113313).substr(26, 3) == string("___"));
+    CHECK(snowman(11113314).substr(26, 3) == string("   "));
+
+    // big hat
+    // no hands
+    CHECK(snowman(21114411).substr(25, 3) == string(" : "));
+    CHECK(snowman(21114412).substr(25, 3) == string("\" \""));
+    CHECK(snowman(21114413).substr(25, 3) == string("___"));
+    CHECK(snowman(21114414).substr(25, 3) == string("   "));
+    // left hands
+    CHECK(snowman(21113411).substr(30, 3) == string(" : "));
+    CHECK(snowman(21113412).substr(30, 3) == string("\" \""));
+    CHECK(snowman(21113413).substr(30, 3) == string("___"));
+    CHECK(snowman(21113414).substr(30, 3) == string("   "));
+    // right hands
+    CHECK(snowman(21114311).substr(29, 3) == string(" : "));
+    CHECK(snowman(21114312).substr(29, 3) == string("\" \""));
+    CHECK(snowman(21114313).substr(29, 3) == string("___"));
+    CHECK(snowman(21114314).substr(29, 3) == string("   "));
+    // both hands
+    CHECK(snowman(21113311).substr(34, 3) == string(" : "));
+    CHECK(snowman(21113312).substr(34, 3) == string("\" \""));
+    CHECK(snowman(21113313).substr(34, 3) == string("___"));
+    CHECK(snowman(21113314).substr(34, 3) == string("   "));
 }
