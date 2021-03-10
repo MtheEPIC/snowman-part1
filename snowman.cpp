@@ -1,6 +1,7 @@
-#include <iostream>
+#include "snowman.hpp"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+namespace ariel {
+	string snowman(int num) {
+		return "_===_\n(.,.)\n( : )\n( : )";
+	}
 }
