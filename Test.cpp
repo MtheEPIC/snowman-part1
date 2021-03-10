@@ -58,74 +58,143 @@ TEST_CASE("Good snowman hat")
 
 TEST_CASE("Good snowman nose")
 {
+    // small hat
     // no hands
-    CHECK(snowman(11114411)[15] == ',');
-    CHECK(snowman(12114411)[15] == '.');
-    CHECK(snowman(13114411)[15] == '_');
-    CHECK(snowman(14114411)[15] == ' ');
+    CHECK(snowman(11114411)[8] == ',');
+    CHECK(snowman(12114411)[8] == '.');
+    CHECK(snowman(13114411)[8] == '_');
+    CHECK(snowman(14114411)[8] == ' ');
     // left hand
-    CHECK(snowman(11113411)[18] == ',');
-    CHECK(snowman(12113411)[18] == '.');
-    CHECK(snowman(13113411)[18] == '_');
-    CHECK(snowman(14113411)[18] == ' ');
+    CHECK(snowman(11113411)[10] == ',');
+    CHECK(snowman(12113411)[10] == '.');
+    CHECK(snowman(13113411)[10] == '_');
+    CHECK(snowman(14113411)[10] == ' ');
     // right hand
-    CHECK(snowman(11113411)[17] == ',');
-    CHECK(snowman(12113411)[17] == '.');
-    CHECK(snowman(13113411)[17] == '_');
-    CHECK(snowman(14113411)[17] == ' ');
+    CHECK(snowman(11113411)[9] == ',');
+    CHECK(snowman(12113411)[9] == '.');
+    CHECK(snowman(13113411)[9] == '_');
+    CHECK(snowman(14113411)[9] == ' ');
     // two hands
-    CHECK(snowman(11113411)[20] == ',');
-    CHECK(snowman(12113411)[20] == '.');
-    CHECK(snowman(13113411)[20] == '_');
-    CHECK(snowman(14113411)[20] == ' ');
+    CHECK(snowman(11113411)[11] == ',');
+    CHECK(snowman(12113411)[11] == '.');
+    CHECK(snowman(13113411)[11] == '_');
+    CHECK(snowman(14113411)[11] == ' ');
+    
+    // big hat
+    // no hands
+    CHECK(snowman(21114411)[15] == ',');
+    CHECK(snowman(22114411)[15] == '.');
+    CHECK(snowman(23114411)[15] == '_');
+    CHECK(snowman(24114411)[15] == ' ');
+    // left hand
+    CHECK(snowman(21113411)[18] == ',');
+    CHECK(snowman(22113411)[18] == '.');
+    CHECK(snowman(23113411)[18] == '_');
+    CHECK(snowman(24113411)[18] == ' ');
+    // right hand
+    CHECK(snowman(21113411)[17] == ',');
+    CHECK(snowman(22113411)[17] == '.');
+    CHECK(snowman(23113411)[17] == '_');
+    CHECK(snowman(24113411)[17] == ' ');
+    // two hands
+    CHECK(snowman(21113411)[20] == ',');
+    CHECK(snowman(22113411)[20] == '.');
+    CHECK(snowman(23113411)[20] == '_');
+    CHECK(snowman(24113411)[20] == ' ');
 }
 
 TEST_CASE("Good snowman left eye")
 {
+    // small hat
     // no hands
-    CHECK(snowman(11114411)[14] == '.');
-    CHECK(snowman(11214411)[14] == 'o');
-    CHECK(snowman(11314411)[14] == 'O');
-    CHECK(snowman(11414411)[14] == '-');
+    CHECK(snowman(11114411)[7] == '.');
+    CHECK(snowman(11214411)[7] == 'o');
+    CHECK(snowman(11314411)[7] == 'O');
+    CHECK(snowman(11414411)[7] == '-');
     // left hand
-    CHECK(snowman(11113411)[17] == ',');
-    CHECK(snowman(12113411)[17] == '.');
-    CHECK(snowman(13113411)[17] == '_');
-    CHECK(snowman(14113411)[17] == ' ');
+    CHECK(snowman(11113411)[9] == '.');
+    CHECK(snowman(11213411)[9] == 'o');
+    CHECK(snowman(11313411)[9] == 'O');
+    CHECK(snowman(11413411)[9] == '-');
     // right hand
-    CHECK(snowman(11113411)[16] == ',');
-    CHECK(snowman(12113411)[16] == '.');
-    CHECK(snowman(13113411)[16] == '_');
-    CHECK(snowman(14113411)[16] == ' ');
+    CHECK(snowman(11114411)[8] == '.');
+    CHECK(snowman(11214311)[8] == 'o');
+    CHECK(snowman(11314311)[8] == 'O');
+    CHECK(snowman(11414311)[8] == '-');
     // two hands
-    CHECK(snowman(11113411)[19] == ',');
-    CHECK(snowman(12113411)[19] == '.');
-    CHECK(snowman(13113411)[19] == '_');
-    CHECK(snowman(14113411)[19] == ' ');
+    CHECK(snowman(11113311)[10] == '.');
+    CHECK(snowman(11213311)[10] == 'o');
+    CHECK(snowman(11313311)[10] == 'O');
+    CHECK(snowman(11413311)[10] == '-');
+
+    // big hat
+    // no hands
+    CHECK(snowman(21114411)[14] == '.');
+    CHECK(snowman(21214411)[14] == 'o');
+    CHECK(snowman(21314411)[14] == 'O');
+    CHECK(snowman(21414411)[14] == '-');
+    // left hand
+    CHECK(snowman(21113411)[17] == '.');
+    CHECK(snowman(21213411)[17] == 'o');
+    CHECK(snowman(21313411)[17] == 'O');
+    CHECK(snowman(21413411)[17] == '-');
+    // right hand
+    CHECK(snowman(21114411)[16] == '.');
+    CHECK(snowman(21214311)[16] == 'o');
+    CHECK(snowman(21314311)[16] == 'O');
+    CHECK(snowman(21414311)[16] == '-');
+    // two hands
+    CHECK(snowman(21113311)[19] == '.');
+    CHECK(snowman(21213311)[19] == 'o');
+    CHECK(snowman(21313311)[19] == 'O');
+    CHECK(snowman(21413311)[19] == '-');
 }
 
 TEST_CASE("Good snowman right eye")
 {
+    // small hat
     // no hands
-    CHECK(snowman(11114411)[16] == '.');
-    CHECK(snowman(11214411)[16] == 'o');
-    CHECK(snowman(11314411)[16] == 'O');
-    CHECK(snowman(11414411)[16] == '-');
+    CHECK(snowman(11114411)[9] == '.');
+    CHECK(snowman(11124411)[9] == 'o');
+    CHECK(snowman(11134411)[9] == 'O');
+    CHECK(snowman(11144411)[9] == '-');
     // left hand
-    CHECK(snowman(11113411)[19] == ',');
-    CHECK(snowman(12113411)[19] == '.');
-    CHECK(snowman(13113411)[19] == '_');
-    CHECK(snowman(14113411)[19] == ' ');
+    CHECK(snowman(11113411)[11] == '.');
+    CHECK(snowman(11123411)[11] == 'o');
+    CHECK(snowman(11133411)[11] == 'O');
+    CHECK(snowman(11143411)[11] == '-');
     // right hand
-    CHECK(snowman(11113411)[18] == ',');
-    CHECK(snowman(12113411)[18] == '.');
-    CHECK(snowman(13113411)[18] == '_');
-    CHECK(snowman(14113411)[18] == ' ');
+    CHECK(snowman(11114411)[10] == '.');
+    CHECK(snowman(11124311)[10] == 'o');
+    CHECK(snowman(11134311)[10] == 'O');
+    CHECK(snowman(11144311)[10] == '-');
     // two hands
-    CHECK(snowman(11113411)[21] == ',');
-    CHECK(snowman(12113411)[21] == '.');
-    CHECK(snowman(13113411)[21] == '_');
-    CHECK(snowman(14113411)[21] == ' ');
+    CHECK(snowman(11113311)[12] == '.');
+    CHECK(snowman(11123311)[12] == 'o');
+    CHECK(snowman(11133311)[12] == 'O');
+    CHECK(snowman(11143311)[12] == '-');
+
+    // big hat
+    // no hands
+    CHECK(snowman(21114411)[16] == '.');
+    CHECK(snowman(21124411)[16] == 'o');
+    CHECK(snowman(21134411)[16] == 'O');
+    CHECK(snowman(21144411)[16] == '-');
+    // left hand
+    CHECK(snowman(21113411)[19] == '.');
+    CHECK(snowman(21123411)[19] == 'o');
+    CHECK(snowman(21133411)[19] == 'O');
+    CHECK(snowman(21143411)[19] == '-');
+    // right hand
+    CHECK(snowman(21114411)[18] == '.');
+    CHECK(snowman(21124311)[18] == 'o');
+    CHECK(snowman(21134311)[18] == 'O');
+    CHECK(snowman(21144311)[18] == '-');
+    // two hands
+    CHECK(snowman(21113311)[21] == '.');
+    CHECK(snowman(21123311)[21] == 'o');
+    CHECK(snowman(21133311)[21] == 'O');
+    CHECK(snowman(21143311)[21] == '-');
 }
 
 TEST_CASE("Good snowman left arm")
@@ -156,10 +225,10 @@ TEST_CASE("Good snowman right arm")
 
 TEST_CASE("Good snowman torso")
 {
-    CHECK(snowman(11114411).substr(26, 3) == string(" : "));
-    CHECK(snowman(11114421).substr(26, 3) == string("] ["));
-    CHECK(snowman(11114431).substr(26, 3) == string("> <"));
-    CHECK(snowman(11114441).substr(26, 3) == string("   "));
+    CHECK(snowman(11114411).substr(22, 3) == string(" : "));
+    CHECK(snowman(11114421).substr(22, 3) == string("] ["));
+    CHECK(snowman(11114431).substr(22, 3) == string("> <"));
+    CHECK(snowman(11114441).substr(22, 3) == string("   "));
 }
 
 TEST_CASE("Good snowman base")
